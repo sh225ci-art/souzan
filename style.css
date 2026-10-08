@@ -1,0 +1,154 @@
+@charset "UTF-8";
+body{
+    font-size: medium;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(250, 231, 215);
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: rgba(9, 92, 110, 0.422);
+   background-color: rgb(228, 186, 186);
+   padding: 10px 5px;
+   border-radius: 8px;
+   text-align: center;
+}
+h2{
+    color: rgba(105, 183, 183, 0.874);
+}
+p{
+    margin-left: 10px;
+    line-height: 1.6;
+}
+nav ul {
+    display:flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+}
+nav a{
+    display:inline-block;
+    text-decoration: none;
+    color: #333;
+    background-color: #ffffff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight:600;
+    transition:  all 0.3s ease;
+}
+nav a:hover{
+    background-color: rgb(175, 79, 129);
+    color: rgba(238, 240, 241, 0.747);
+    transition: all(1,03);
+    padding: 10px 25px;
+}
+.personligt-section, .mat-section, .fritids-section, .hobby-section {
+    border: 2px dashed rgb(197, 143, 42);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+#Min-personlighet:hover{
+    transform: scale(1.04);
+    background-color: rgb(207, 101, 156);
+    transition: all(1,03);
+    border: solid whitesmoke 5px;
+     h2{
+        font-size: 200%;
+        color: rgb(214, 244, 244);
+    }
+}
+#mat:hover, #fritids:hover, #hobby:hover{
+    transform: scale(1.04);
+    transition: all(0.5);
+    background-color:rgba(192, 96, 101, 0.29);
+     h2{
+        font-size: 200%;
+        color: rgb(214, 244, 244);
+    }
+}
+.mat-section {
+    position: relative;
+}
+ .icon{
+    position: absolute;
+    right: -10px;
+    top:-16px;
+    width: 25px;
+    height:25px;
+    border:2px solid rgb(197, 143, 42);
+    background-color:  rgb(250, 231, 215);
+    border-radius: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+ }
+ .hobby-section{  
+    background-image: url(img/AI.jpeg);
+    background-position:top right;
+}
+ol {
+    margin-left: 30px;
+    padding-left: 20px;
+}
+
+ol li {
+    margin-bottom: 5px;
+}
+img {
+    width: 100%;
+    max-width: 225px;
+    height: auto;
+    border-radius: 8px;
+}
+.img-box {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   justify-content: center;
+   margin: 20px 0;
+}
+.my-Fotografering {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+.my-Fotografering:hover {
+    transform: scale(1.1);
+}
+footer{
+    border: 2px dashed rgb(197, 143, 42); 
+    border-radius: 15px;
+    background-color: rgb(230, 190, 190);
+    padding: 10px 0px 10px 0px;
+}
+@media (min-width: 750px) {
+    .page-grid-container {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 25px;
+     max-width: 1200px;
+     margin: 0 auto;
+    }
+    .main-header {
+     grid-column: 1 / span 2; 
+    }
+    .personligt-section {
+     grid-column:1;
+    }
+    .mat-section {
+     grid-column: 2; 
+    }
+    .fritids-section {
+    grid-column: 1 / span 2;
+    }
+    .hobby-section {
+        grid-column: 1 / span 2;
+    }
+    footer {
+        grid-column: 1 / span 2;
+    }
+}
